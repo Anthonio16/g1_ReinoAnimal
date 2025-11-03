@@ -2,8 +2,8 @@ package pkVetSystem.pkReinoViviente.pkAnimal;
 
 public abstract class Mamifero extends AnimalVertebrado {
 
-    public Mamifero(String nombre, int edad, Float peso) {
-        super(nombre, edad, peso);
+    public Mamifero(String nombre, int edad, Float peso, String especie) {
+        super(nombre, edad, peso, especie);
     }
 
 }

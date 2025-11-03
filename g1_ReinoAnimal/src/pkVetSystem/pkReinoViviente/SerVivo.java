@@ -7,13 +7,16 @@ public abstract class SerVivo {
     private String nombre;
     private Integer edad;
     private Float peso;
+    private String especie;
     
     
-    public SerVivo(String nombre, Integer edad, Float peso) {
+    
+    public SerVivo(String nombre, Integer edad, Float peso, String especie) {
         setEstaVivo(true);
         setNombre(nombre);
         setEdad(edad);
         setPeso(peso);
+        setEspecie(especie);
     }
     
     public Boolean getEstaVivo() {
@@ -39,6 +42,13 @@ public abstract class SerVivo {
     }
     public void setPeso(Float peso) {
         this.peso = peso;
+    }
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
 
 

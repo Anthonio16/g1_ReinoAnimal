@@ -5,8 +5,8 @@ public class Camaleon extends Reptil {
     private String colorActual;
 
 
-    public Camaleon(String nombre, int edad, Float peso, String colorActual) {
-        super(nombre, edad, peso);
+    public Camaleon(String nombre, int edad, Float peso, String especie, String colorActual) {
+        super(nombre, edad, peso, especie);
         setColorActual(colorActual);
     }
 

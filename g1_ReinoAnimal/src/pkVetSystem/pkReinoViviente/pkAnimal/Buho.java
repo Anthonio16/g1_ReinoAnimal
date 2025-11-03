@@ -2,8 +2,8 @@ package pkVetSystem.pkReinoViviente.pkAnimal;
 
 public class Buho extends Ave {
 
-    public Buho(String nombre, Integer edad, Float peso) {
-        super(nombre, edad, peso);
+    public Buho(String nombre, Integer edad, Float peso, String especie) {
+        super(nombre, edad, peso, especie);
         //TODO Auto-generated constructor stub
     }
 
