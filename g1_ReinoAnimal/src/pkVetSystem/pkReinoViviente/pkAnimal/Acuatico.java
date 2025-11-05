@@ -6,4 +6,8 @@ public abstract class Acuatico extends Mamifero {
         super(nombre, edad, peso, especie);
     }
 
+    public void nadar() {
+        System.out.println("El " + getEspecie()+ " " + getNombre() + " está nadando.");
+    }
+
 }
