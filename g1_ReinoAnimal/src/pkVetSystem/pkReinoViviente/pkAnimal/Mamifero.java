@@ -6,4 +6,12 @@ public abstract class Mamifero extends AnimalVertebrado {
         super(nombre, edad, peso, especie);
     }
 
+    public void lactar(){
+        System.out.println("El mamífero " + getNombre() + " está lactando a sus crías.");
+    }
+
+    public void comer(){
+        System.out.println("El mamífero " + getNombre() + " está comiendo.");
+    }
+
 }

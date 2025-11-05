@@ -6,7 +6,6 @@ public class Buho extends Ave {
 
     public Buho(String nombre, Integer edad, Float peso, String especie) {
         super(nombre, edad, peso, especie);
-        //TODO Auto-generated constructor stub
     }
 
     // Agregar el método cazar que recibe un PezPayaso como parámetro cuando exista la clase PezPayaso

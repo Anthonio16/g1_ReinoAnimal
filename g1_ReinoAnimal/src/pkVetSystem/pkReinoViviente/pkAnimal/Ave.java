@@ -3,7 +3,6 @@ package pkVetSystem.pkReinoViviente.pkAnimal;
 public abstract class Ave extends AnimalVertebrado {
 
     public Ave(String nombre, Integer edad, Float peso, String especie) {
-        especie = "Ave ";
         super(nombre, edad, peso, especie);
     }
 
