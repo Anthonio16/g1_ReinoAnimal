@@ -4,6 +4,7 @@ import pkVetSystem.pkReinoViviente.pkAnimal.AnimalVertebrado;
 import pkVetSystem.pkReinoViviente.pkAnimal.PezPayaso;
 
 public class Veterinario extends Persona {
+
     private String login;
     private String password;
     private int animalesAtendidos = 0;
@@ -25,6 +26,10 @@ public class Veterinario extends Persona {
         return false;
     }
 
+    public void entrarCentroConservacion() {
+        System.out.println("El veterinario " + getNombre() + " ha ingresado al centro de conservación.");
+    }
+
     public boolean registrarAnimal(AnimalVertebrado animal) {
         if (animal != null) {
             System.out.println("Animal registrado: " + animal.getNombre());
@@ -42,20 +47,30 @@ public class Veterinario extends Persona {
         animalesAtendidos++; 
         return true;
     }
-    
-    public String diagnosticarAnimal(AnimalVertebrado animal) {
+
+    public String observarSintomas(AnimalVertebrado animal) {
         if (animal instanceof PezPayaso) {
-            return "El animal presenta una infección bacteriana.";
+            return "Observación: el pez payaso nada lentamente y tiene manchas en sus aletas.";
+        } else {
+            return "Observación: el animal se comporta de manera normal y activa.";
         }
-        return "El animal está en buen estado de salud.";
+    }   
+
+    public String diagnosticarAnimal(AnimalVertebrado animal) {
+        observarSintomas(animal);
+        if (animal instanceof PezPayaso) {
+            return "Diagnostico: el animal presenta una infección bacteriana.";
+        }
+        return "Diagnostico: el animal está saludable.";
     }
 
     public String darTratamiento(AnimalVertebrado animal) {
         if (animal instanceof PezPayaso) {
-            return "Dar antibiótico acuático durante una semana y mejorar calidad del agua.";
+            return "Tratamiento: administrar antibiótico acuático durante una semana y mejorar calidad del agua.";
         }
-        return "No necesita tratamiento ya que tiene un buen estado de salud.";
+        return "Tratamiento: solo necesita mantener una buena alimentación.";
     }
+
     public int getAnimalesAtendidos() {
         return animalesAtendidos;
     }
@@ -63,8 +78,9 @@ public class Veterinario extends Persona {
     public String generarReporte (AnimalVertebrado animal) {
         return "Reporte del animal: " + animal.getNombre() + "\n" +
                "Especie:" + animal.getEspecie() + "\n" +
-               "Diagnóstico: " + diagnosticarAnimal(animal) + "\n" +
-               "Tratamiento: " + darTratamiento(animal);
+                diagnosticarAnimal(animal) + "\n" +
+                darTratamiento(animal) + "\n" +
+                "Animales atendidos por este veterinario: " + animalesAtendidos;
     }
 
     public String getLogin() {
@@ -79,6 +95,6 @@ public class Veterinario extends Persona {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    
 }
 

@@ -13,7 +13,7 @@ public abstract class Persona {
     }
 
     public Persona(String nombre, String apellido) {
-        setCedula(cedula);
+        setNombre(nombre);
         setApellido(apellido);
     }
 
@@ -47,8 +47,5 @@ public abstract class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }       
-
-
-
 
 }
