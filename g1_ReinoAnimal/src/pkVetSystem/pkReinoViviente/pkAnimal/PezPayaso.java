@@ -8,17 +8,13 @@ public class PezPayaso extends Pez {
         super(nombre, edad, peso, especie);
     }
 
-    public String comer(Alga alga) {
-        return "El pez payaso " + getNombre() + " está comiendo algas: " + alga.getTipo();
-    }
-
-     public String comer() {
-        return "El pez payaso " + getNombre() + " está comiendo hambre...";
+    public void comer(Alga alga) {
+        System.out.println("El pez payaso " + getNombre() + " está comiendo algas: " + alga.getTipo());
     }
     
-    public boolean estaNadando() {
+    public void nadar() {
         System.out.println("El pez payaso " + getNombre() + " está nadando alegremente en el acuario.");
-        return true;
+
     }
 
     @Override

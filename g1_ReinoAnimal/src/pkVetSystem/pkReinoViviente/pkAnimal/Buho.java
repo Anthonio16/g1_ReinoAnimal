@@ -10,15 +10,15 @@ public class Buho extends Ave {
 
     // Agregar el método cazar que recibe un PezPayaso como parámetro cuando exista la clase PezPayaso
 
-    public String cazar(PezPayaso pecesillo){
-        return "El buho " + getNombre() + " ha cazado al pez payaso " + pecesillo.getNombre() + ".";
+    public void cazar(PezPayaso pecesillo){
+        System.out.println("El buho " + getNombre() + " ha cazado al pez payaso " + pecesillo.getNombre() + ".");
     }
 
-    public String ulular() {
-        return "El buho " + getNombre() + " está ululando: Huuu Huuu Huuu...";
+    public void ulular() {
+        System.out.println("El buho " + getNombre() + " está ululando: Huuu Huuu Huuu...");
     }
 
-    public String girarCabeza() {
-        return "El buho " + getNombre() + " ha girado su cabeza 270 grados.";
+    public void girarCabeza() {
+        System.out.println("El buho " + getNombre() + " ha girado su cabeza 270 grados.");
     }
 }
